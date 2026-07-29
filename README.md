@@ -64,6 +64,28 @@ This \(a\) is for **660nm wavelength**.
 
 ---
 
+## TABULATION
+
+### Propagation Loss
+
+| S. No. | Wavelength | Fiber Length (m) | Input Amplitude (Vpp) | Received Output Amplitude (Vpp) |
+|--------|------------|------------------|------------------------|----------------------------------|
+| 1 | 660 nm | 1 m | 2.0 | 64.8 mV |
+| 2 | 660 nm | 3 m | 2.0 | 52.8 mV |
+| 3 | 950 nm | 1 m | 2.0 | 63.2 mV |
+| 4 | 950 nm | 3 m | 2.0 | 53.6 mV |
+
+### Bending Loss
+
+| S. No. | Bending Diameter (cm) | Input Amplitude (Vpp) | Received Output Amplitude (Vpp) |
+|--------|------------------------|------------------------|----------------------------------|
+| 1 | Straight Fiber | 2.0 | 64.8 mV |
+| 2 | 10 cm | 2.0 | 63.2 mV |
+| 3 | 8 cm | 2.0 | 60.0 mV |
+| 4 | 6 cm | 2.0 | 58.0 mV |
+| 5 | 4 cm | 2.0 | 56.0 mV |
+| 6 | 3 cm | 2.0 | 54.0 mV |
+| 7 | 2 cm | 2.0 | 52.8 mV |
 ### For 950nm Wavelength
 1. Set switch **SW9 → TX2 position**.  
 2. Set Jumper **JP7 → +12V position**.  
@@ -92,19 +114,99 @@ This \(a\) is for **950nm wavelength**.
 
 ---
 
-## TABULATION
+## CALCULATIONS
 
-### Propagation Loss
-| Fiber Length | Input Amplitude (V) | Output Amplitude (V) |
-|--------------|----------------------|-----------------------|
-|              |                      |                       |
+### Propagation Loss at 660 nm
 
-### Bending Loss
-| Bending Diameter | Input Amplitude (V) | Output Amplitude (V) |
-|------------------|----------------------|-----------------------|
-|                  |                      |                       |
+Given:
+
+- V₁ = 64.8 mV
+- V₂ = 52.8 mV
+- L₁ = 1 m
+- L₂ = 3 m
+
+Formula:
+
+α = ln(V₁/V₂) / (L₂ - L₁)
+
+Substituting:
+
+α = ln(64.8/52.8) / (3 - 1)
+
+α = 0.1025 Np/m
+
+Conversion to dB/m:
+
+α(dB/m) = 8.686 × α
+
+α = 8.686 × 0.1025
+
+α = 0.890 dB/m
+
+Therefore, attenuation at 660 nm = 0.1025 Np/m = 0.890 dB/m.
 
 ---
+
+### Propagation Loss at 950 nm
+
+Given:
+
+- V₁ = 63.2 mV
+- V₂ = 53.6 mV
+- L₁ = 1 m
+- L₂ = 3 m
+
+Formula:
+
+α = ln(V₁/V₂) / (L₂ - L₁)
+
+Substituting:
+
+α = ln(63.2/53.6) / (3 - 1)
+
+α = 0.0824 Np/m
+
+Conversion to dB/m:
+
+α(dB/m) = 8.686 × α
+
+α = 8.686 × 0.0824
+
+α = 0.716 dB/m
+
+Therefore, attenuation at 950 nm = 0.0824 Np/m = 0.716 dB/m.
+
+---
+
+### Comparison
+
+| Wavelength | V₁ (1 m) | V₂ (3 m) | Attenuation (Np/m) | Attenuation (dB/m) |
+|------------|----------|----------|--------------------|--------------------|
+| 660 nm | 64.8 mV | 52.8 mV | 0.1025 | 0.890 |
+| 950 nm | 63.2 mV | 53.6 mV | 0.0824 | 0.716 |
+
+### Bending Loss
+
+Formula:
+
+Bending Loss (dB) = 20 log₁₀(Vstraight / Vbent)
+
+For 2 cm bending diameter:
+
+Vstraight = 64.8 mV
+Vbent = 52.8 mV
+
+Bending Loss = 20 log₁₀(64.8 / 52.8)
+
+Bending Loss = 1.78 dB
+
+---
+OUTPUT 
+<img width="1600" height="1200" alt="WhatsApp Image 2026-07-27 at 3 30 03 PM (2)" src="https://github.com/user-attachments/assets/e747f86c-4cb7-4b29-91ab-ffaa730fc68b" />
+<img width="1600" height="1200" alt="WhatsApp Image 2026-07-27 at 3 30 04 PM (2)" src="https://github.com/user-attachments/assets/6fbf730d-4da3-4abf-8a34-4c19a0030c67" />
+<img width="1600" height="1200" alt="WhatsApp Image 2026-07-27 at 3 30 05 PM (1)" src="https://github.com/user-attachments/assets/6fcae461-c5cf-4719-a5f6-6eb157dfe41f" />
+
+
 
 ## RESULT
 - Propagation loss and bending losses for **660nm** and **950nm** wavelengths were measured.  
