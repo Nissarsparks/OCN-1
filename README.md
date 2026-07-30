@@ -200,6 +200,12 @@ Bending Loss =5.40 dB
      
 
 ---
+### OUTPUT
+<img width="1600" height="1200" alt="WhatsApp Image 2026-07-27 at 3 30 03 PM (2)" src="https://github.com/user-attachments/assets/e747f86c-4cb7-4b29-91ab-ffaa730fc68b" />
+<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/e8a65e6c-2145-4d28-9859-d5730bad0c73" />
+<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/f9ff1d5a-f757-40d7-9081-69dab9844bc4" />
+
+
 
 ## RESULT
 - Propagation loss and bending losses for **660nm** and **950nm** wavelengths were measured.  
