@@ -63,6 +63,26 @@ Where:
 This \(a\) is for **660nm wavelength**.  
 
 ---
+### Propagation Loss
+
+| S. No. | Wavelength | Fiber Length (m) | Input Amplitude (Vpp) | Received Output Amplitude (Vpp) |
+|--------|------------|------------------|------------------------|----------------------------------|
+| 1 | 660 nm | 1 m | 3.12 | 131.0 mV |
+| 2 | 660 nm | 3 m | 3.12 | 70.3 mV |
+| 3 | 950 nm | 1 m | 3.12 | 112.0 mV |
+| 4 | 950 nm | 3 m | 3.12 | 76.3 mV |
+
+### Bending Loss
+
+| S. No. | Bending Diameter (cm) | Input Amplitude (Vpp) | Received Output Amplitude (Vpp) |
+|--------|------------------------|------------------------|----------------------------------|
+| 1 | Straight Fiber | 2.0 | 131.0 mV |
+| 2 | 10 cm | 3.12 | 118.5 mV |
+| 3 | 8 cm | 3.12 | 106.8 mV |
+| 4 | 6 cm | 3.12 | 95.2 mV |
+| 5 | 4 cm | 3.12 | 84.6 mV |
+| 6 | 3 cm | 3.12 | 77.4 mV |
+| 7 | 2 cm | 3.12 |70.3mV |
 
 ### For 950nm Wavelength
 1. Set switch **SW9 → TX2 position**.  
@@ -91,18 +111,93 @@ This \(a\) is for **950nm wavelength**.
 6. Plot graph: **Received signal amplitude vs. Loop diameter**.  
 
 ---
+## CALCULATIONS
 
-## TABULATION
+### Propagation Loss at 660 nm
 
-### Propagation Loss
-| Fiber Length | Input Amplitude (V) | Output Amplitude (V) |
-|--------------|----------------------|-----------------------|
-|              |                      |                       |
+Given:
+
+- V₁ = 131 mV
+- V₂ = 70.3 mV
+- L₁ = 1 m
+- L₂ = 3 m
+
+Formula:
+
+α = ln(V₁/V₂) / (L₂ - L₁)
+
+Substituting:
+
+α = ln(131/70.3) / (3 - 1)
+
+α = 0.3113 Np/m
+
+Conversion to dB/m:
+
+α(dB/m) = 8.686 × α
+
+α = 8.686 × 0.3113
+
+α = 2.704 dB/m
+
+Therefore, attenuation at 660 nm = 0.3113 Np/m = 2.704 dB/m.
+
+---
+
+### Propagation Loss at 950 nm
+
+Given:
+
+- V₁ = 112 mV
+- V₂ = 76.3 mV
+- L₁ = 1 m
+- L₂ = 3 m
+
+Formula:
+
+α = ln(V₁/V₂) / (L₂ - L₁)
+
+Substituting:
+
+α = ln(112/76.3) / (3 - 1)
+
+α = 0.1919 Np/m
+
+Conversion to dB/m:
+
+α(dB/m) = 8.686 × α
+
+α = 8.686 × 0.1919
+
+α = 1.667 dB/m
+
+Therefore, attenuation at 950 nm = 0.1919 Np/m = 1.667 dB/m.
+
+---
+
+### Comparison
+
+| Wavelength | V₁ (1 m) | V₂ (3 m) | Attenuation (Np/m) | Attenuation (dB/m) |
+|------------|----------|----------|--------------------|--------------------|
+| 660 nm | 131 mV | 70.3 mV | 0.3113 | 2.704|
+| 950 nm | 112 mV | 76.3 mV | 0.1919 | 1.667 |
 
 ### Bending Loss
-| Bending Diameter | Input Amplitude (V) | Output Amplitude (V) |
-|------------------|----------------------|-----------------------|
-|                  |                      |                       |
+
+Formula:
+
+Bending Loss (dB) = 20 log₁₀(Vstraight / Vbent)
+
+For 2 cm bending diameter:
+
+Vstraight = 131 mV
+Vbent =70.3 mV
+
+Bending Loss = 20 log₁₀(131 / 70.3)
+
+Bending Loss =5.40 dB
+
+     
 
 ---
 
